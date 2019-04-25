@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora de churrasco</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body style="background-image: url(churrasco.jpg);">
+    <br>
+    <div class="container">
+        <div class="card">
+            <div class="card-header" style="font-size: 22px; text-align: center; font-weight: bold">
+                Calcule seu churrasco
+            </div>
+            <div class="card-body">
+                <div id="escolhaItensChurrasco">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" style="width: 25%">
+                            <a class="nav-link active" id="Pessoas-tab" data-toggle="tab" href="#Pessoas" role="tab"
+                                aria-controls="Pessoas" aria-selected="true">Quantidade de Pessoas</a>
+                        </li>
+                        <li class="nav-item" style="width: 25%">
+                            <a class="nav-link" id="Carnes-tab" data-toggle="tab" href="#Carnes" role="tab"
+                                aria-controls="Carnes" aria-selected="false">Carnes</a>
+                        </li>
+                        <li class="nav-item" style="width: 25%">
+                            <a class="nav-link" id="Bebidas-tab" data-toggle="tab" href="#Bebidas" role="tab"
+                                aria-controls="Bebidas" aria-selected="false">Bebidas</a>
+                        </li>
+                        <li class="nav-item" style="width: 25%">
+                            <a class="nav-link" id="Acompanhamentos-tab" data-toggle="tab" href="#Acompanhamentos"
+                                role="tab" aria-controls="Acompanhamentos" aria-selected="false">Acompanhamentos</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <br><br>
+                        <div class="tab-pane fade show active" id="Pessoas" role="tabpanel"
+                            aria-labelledby="Pessoas-tab">
+                            <h4 class="card-title" style="text-align: center">Deseja fazer o churrasco para quantas
+                                pessoas?
+                            </h4>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-4 offset-md-2">
+                                    <label>Quantidade de adultos:</label>
+                                    <input id="qtdaAdultos" class="form-control" type="text">
+                                </div>
+                                <div class="col-md-4">
+                                    <label>Quantidade de crianças:</label>
+                                    <input id="qtdaCriancas" class="form-control" type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="Carnes" role="tabpanel" aria-labelledby="Carnes-tab">
+                            <h4 class="card-title" style="text-align: center">Escolha os tipos de carne que você deseja
+                                utilizar:
+                            </h4>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-5 offset-md-1">
+                                    <ul class="list-group">
+                                        <li class="list-group-item">
+                                            <div class="form-check">
+                                                <input class="form-check-input checkTipoCarne" type="checkbox"
+                                                    value="Picanha" id="checkTipoCarne">
+                                                <label class="form-check-label" for="checkTipoCarne"> Picanha </label>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="form-check">
+                                                <input class="form-check-input checkTipoCarne" type="checkbox"
+                                                    value="Costela" id="checkTipoCarne1">
+                                                <label class="form-check-label" for="checkTipoCarne1"> Costela </label>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="form-check">
+                                                <input class="form-check-input checkTipoCarne" type="checkbox"
+                                                    value="Fraldinha" id="checkTipoCarne2">
+                                                <label class="form-check-label" for="checkTipoCarne2"> Fraldinha
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="form-check">
+                                                <input class="form-check-input checkTipoCarne" type="checkbox"
+                                                    value="Maminha" id="checkTipoCarne3">
+                                                <label class="form-check-label" for="checkTipoCarne3"> Maminha </label>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="form-check">
+                                                <input class="form-check-input checkTipoCarne" type="checkbox"
+                                                    value="Asinhas de Frango" id="checkTipoCarne4">
+                                                <label class="form-check-label" for="checkTipoCarne4"> Asinhas de Frango
+                                                </label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-5">
+                                    <ul class="list-group">
+                                        <li class="list-group-item">
+                                            <div class="form-check">
+                                                <input class="form-check-input checkTipoCarne" type="checkbox"
+                                                    value="Alcatra" id="checkTipoCarne5">
+                                                <label class="form-check-label" for="checkTipoCarne5"> Alcatra </label>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="form-check">
+                                                <input class="form-check-input checkTipoCarne" type="checkbox"
+                                                    value="Filé Mignon" id="checkTipoCarne6">
+                                                <label class="form-check-label" for="checkTipoCarne6"> Filé Mignon
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="form-check">
+                                                <input class="form-check-input checkTipoCarne" type="checkbox"
+                                                    value="Contra Filé" id="checkTipoCarne7">
+                                                <label class="form-check-label" for="checkTipoCarne7"> Contra Filé
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="form-check">
+                                                <input class="form-check-input checkTipoCarne" type="checkbox"
+                                                    value="Cupim" id="checkTipoCarne8">
+                                                <label class="form-check-label" for="checkTipoCarne8"> Cupim </label>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="form-check">
+                                                <input class="form-check-input checkTipoCarne" type="checkbox"
+                                                    value="Linguiça" id="checkTipoCarne9">
+                                                <label class="form-check-label" for="checkTipoCarne9"> Linguiça </label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="Bebidas" role="tabpanel" aria-labelledby="Bebidas-tab">
+                            <h4 class="card-title" style="text-align: center">Escolha as bebidas para o seu churras:
+                            </h4>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-5 offset-md-1">
+                                    <ul class="list-group">
+                                        <li class="list-group-item">
+                                            <div class="form-check">
+                                                <input class="form-check-input checkTipoBebida" type="checkbox"
+                                                    value="Água" id="checkTipoBebida">
+                                                <label class="form-check-label" for="checkTipoBebida"> Água </label>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="form-check">
+                                                <input class="form-check-input checkTipoBebida" type="checkbox"
+                                                    value="Suco" id="checkTipoBebida1">
+                                                <label class="form-check-label" for="checkTipoBebida1"> Suco </label>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="form-check">
+                                                <input class="form-check-input checkTipoBebida" type="checkbox"
+                                                    value="H2O" id="checkTipoBebida2">
+                                                <label class="form-check-label" for="checkTipoBebida2"> H2O </label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-5">
+                                    <ul class="list-group">
+                                        <li class="list-group-item">
+                                            <div class="form-check">
+                                                <input class="form-check-input checkTipoBebida" type="checkbox"
+                                                    value="Refrigerante" id="checkTipoBebida3">
+                                                <label class="form-check-label" for="checkTipoBebida3"> Refrigerante
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="form-check">
+                                                <input class="form-check-input checkTipoBebida" type="checkbox"
+                                                    value="Energético" id="checkTipoBebida4">
+                                                <label class="form-check-label" for="checkTipoBebida4"> Energético
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="form-check">
+                                                <input class="form-check-input checkTipoBebida" type="checkbox"
+                                                    value="Cerveja" id="checkTipoBebida5">
+                                                <label class="form-check-label" for="checkTipoBebida5">Cerveja</label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="Acompanhamentos" role="tabpanel"
+                            aria-labelledby="Acompanhamentos-tab">
+                            <h4 class="card-title" style="text-align: center">Agora finalize escolhendo seus
+                                acompanhamentos:</h4>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-5 offset-md-1">
+                                    <ul class="list-group">
+                                        <li class="list-group-item">
+                                            <div class="form-check">
+                                                <input class="form-check-input checkTipoAcompanhamento" type="checkbox"
+                                                    value="Arroz" id="checkTipoAcompanhamento">
+                                                <label class="form-check-label" for="checkTipoAcompanhamento"> Arroz
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="form-check">
+                                                <input class="form-check-input checkTipoAcompanhamento" type="checkbox"
+                                                    value="Feijão Tropeiro" id="checkTipoAcompanhamento1">
+                                                <label class="form-check-label" for="checkTipoAcompanhamento1"> Feijão
+                                                    Tropeiro </label>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="form-check">
+                                                <input class="form-check-input checkTipoAcompanhamento" type="checkbox"
+                                                    value="Mandioca" id="checkTipoAcompanhamento2">
+                                                <label class="form-check-label" for="checkTipoAcompanhamento2"> Mandioca
+                                                </label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-5">
+                                    <ul class="list-group">
+                                        <li class="list-group-item">
+                                            <div class="form-check">
+                                                <input class="form-check-input checkTipoAcompanhamento" type="checkbox"
+                                                    value="Vinagrete" id="checkTipoAcompanhamento3">
+                                                <label class="form-check-label" for="checkTipoAcompanhamento3">
+                                                    Vinagrete
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="form-check">
+                                                <input class="form-check-input checkTipoAcompanhamento" type="checkbox"
+                                                    value="Pão com alho" id="checkTipoAcompanhamento4">
+                                                <label class="form-check-label" for="checkTipoAcompanhamento4"> Pão com
+                                                    alho
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="form-check">
+                                                <input class="form-check-input checkTipoAcompanhamento" type="checkbox"
+                                                    value="Farofa temperada" id="checkTipoAcompanhamento5">
+                                                <label class="form-check-label" for="checkTipoAcompanhamento5">Farofa
+                                                    temperada</label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br><br>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-12" style="text-align: center">
+                            <button type="button" style="width: 20%" class="btn btn-dark"
+                                onclick="calculaChurrasco()">Calcular meu churrasco</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="resultadoChurrasco" style="display:none">
+                    <h4 class="card-title" style="text-align: center">Resultado do Churras</h4>
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="tblTotalChurrasco">
+                            <thead>
+                                <tr>
+                                    <th> Descrição </th>
+                                    <th> Total </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <br><br>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-12" style="text-align: center">
+                            <button type="button" style="width: 20%" class="btn"
+                                onclick="voltarTelaCalcularChurrasco()">Voltar para Calculadora</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" id="gifCalculaChurrasco" style="display:none">
+                    <div class="col-md-12" style="text-align:center">
+                        <br><br><br><br><br>
+                        <img class="img-fluid rounded-circle" style="width: 150px" src="CarneFogo.gif">
+                        <h4 style="color:#808080; padding-top: 10px">CALCULANDO CHURRASCO...</h2>
+                            <br><br><br><br><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <script>
+        function calculaChurrasco() {
+            $("#escolhaItensChurrasco").hide();
+            $("#gifCalculaChurrasco").show();
+
+            var qdtaPessoas = parseInt($("#qtdaAdultos").val());
+            var qdtaCriancas = parseInt($("#qtdaCriancas").val());
+
+            //Quantidades relativas a uma pessoa
+            var qtdaCarnePorPessoa = 400;
+            var qtdaBebida = 700;
+            var qtdaArroz = 100;
+            var qtdaFeijao = 90;
+            var qtdaAcompanhamento = 30;
+
+            //Realiza os calculos baseados para uma pessoa ------------------------------------------------
+            var qtdaTipoCarneEscolhido = 0;
+            var qtdaTipoBebidaEscolhida = 0;
+
+            var porcaoCarne = 0;
+            var porcaoBebida = 0;
+            var porcaoArroz = 0;
+            var porcaoFeijao = 0;
+            var porcaoAcompanhamento = 0;
+
+            $(".checkTipoCarne").each(function () {
+                if (this.checked) {
+                    qtdaTipoCarneEscolhido++;
+                }
+            });
+
+            $(".checkTipoBebida").each(function () {
+                if (this.checked) {
+                    qtdaTipoBebidaEscolhida++;
+                }
+            });
+
+            $(".checkTipoAcompanhamento").each(function () {
+                if (this.checked) {
+                    var acompanhamento = this.value;
+
+                    if (acompanhamento == "Arroz") {
+                        porcaoArroz += qtdaArroz;
+                    }
+                    else if (acompanhamento == "Feijão Tropeiro") {
+                        porcaoFeijao += qtdaFeijao;
+                    }
+                    else {
+                        porcaoAcompanhamento += qtdaAcompanhamento;
+                    }
+                }
+            });
+
+            porcaoCarne = parseFloat(qtdaCarnePorPessoa / qtdaTipoCarneEscolhido);
+            porcaoBebida = parseFloat(qtdaBebida / qtdaTipoBebidaEscolhida);
+
+            var totalCarne = 0;
+            var totalBebida = 0;
+            var totalArroz = 0;
+            var totalFeijao = 0;
+            var totalAcompanhamento = 0;
+
+            // Calcula de acordo com a qtda de pessoas do churrasco -----------------------------------------
+            if (qdtaPessoas > 0) {
+                totalCarne += porcaoCarne * qdtaPessoas;
+                totalBebida += porcaoBebida * qdtaPessoas;
+                totalArroz += porcaoArroz * qdtaPessoas;
+                totalFeijao += porcaoFeijao * qdtaPessoas;
+                totalAcompanhamento += porcaoAcompanhamento * qdtaPessoas;
+            }
+
+            if (qdtaCriancas > 0) {
+                totalCarne += (porcaoCarne * qdtaCriancas) / 2;
+                totalBebida += (porcaoBebida * qdtaPessoas) / 2;
+                totalArroz += (porcaoArroz * qdtaPessoas) / 2;
+                totalFeijao += (porcaoFeijao * qdtaPessoas) / 2;
+                totalAcompanhamento += (porcaoAcompanhamento * qdtaPessoas) / 2;
+            }
+
+            //Preenche a tabela com os resultados --------------------------------------------------------------
+            $(".checkTipoCarne").each(function () {
+                if (this.checked) {
+                    tr = $('<tr></tr>');
+
+                    tr.append('<td>' + this.value + '</td>');
+                    tr.append('<td>' + parseFloat(totalCarne / 1000).toFixed(2) + ' Kg </td>');
+
+                    $('#tblTotalChurrasco').append(tr);
+                }
+            });
+
+            $(".checkTipoBebida").each(function () {
+                if (this.checked) {
+                    tr = $('<tr></tr>');
+
+                    tr.append('<td>' + this.value + '</td>');
+                    tr.append('<td>' + parseFloat(totalBebida / 1000).toFixed(2) + ' Litros</td>');
+
+                    $('#tblTotalChurrasco').append(tr);
+                }
+            });
+
+            $(".checkTipoAcompanhamento").each(function () {
+                if (this.checked) {
+                    var acompanhamento = this.value;
+
+                    tr = $('<tr></tr>');
+                    tr.append('<td>' + acompanhamento + '</td>');
+
+                    if (acompanhamento == "Arroz") {
+                        tr.append('<td>' + parseFloat(totalArroz / 1000).toFixed(2) + ' Kg</td>');
+                    }
+                    else if (acompanhamento == "Feijão Tropeiro") {
+                        tr.append('<td>' + parseFloat(totalFeijao / 1000).toFixed(2) + ' Kg</td>');
+                    }
+                    else {
+                        tr.append('<td>' + parseFloat(totalAcompanhamento / 1000).toFixed(2) + ' Kg</td>');
+                    }
+
+                    $('#tblTotalChurrasco').append(tr);
+                }
+            });
+
+            setTimeout(function () {
+                $("#resultadoChurrasco").show();
+                $("#gifCalculaChurrasco").hide();
+            }, 3000);
+        }
+
+        function voltarTelaCalcularChurrasco() {
+            location.reload();
+        }
+    </script>
+</body>
+
+</html>
